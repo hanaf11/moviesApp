@@ -3,6 +3,8 @@ import MovieCard from "../MovieCard/MovieCard";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+import SearchIcon from '@material-ui/icons/Search';
+
 function Home() {
     const [movies,setMovies]=useState([]);
     var film=null;
@@ -37,10 +39,15 @@ function Home() {
     },[page,filter])
   return (
     <div className="Home">
+        <div class="header">
     <h1>My Movie App</h1>
+    </div>
     <div className="content">
+    <div className="search-container">
     <input type="text" id="filter"></input>
-    <button onClick={()=>setFilter(document.getElementById("filter").value)}>Search</button>
+    <button onClick={()=>setFilter(document.getElementById("filter").value)}>Search <SearchIcon/></button>
+    </div>
+    <div className="movies-container">
         {Object.keys(movies).map(key=>{
             film=movies[key];
             console.log(film.title);
@@ -49,11 +56,11 @@ function Home() {
             );
            
         })}
-
-        <label>Choose page</label>  
+    </div>
+        <div className="page-container">
         <input type="number" id="inputPage"></input>
         <button onClick={()=>setPage(document.getElementById("inputPage").value)}>Choose page</button>
-            
+         </div>   
         
 
     </div>

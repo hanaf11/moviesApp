@@ -1,0 +1,57 @@
+.moviepage{
+    padding:0;
+    background-color: rgb(209, 208, 208);
+}
+.banner-container{
+    background-color: rgb(209, 208, 208);
+}
+.banner-container>h1{
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    padding-bottom: 20px;
+    margin-top:5px;
+    margin-bottom: 0;
+    text-shadow: 8px 10px 10px #777676;
+}
+.banner{
+  width:70%;
+  border-radius: 20px;
+  box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.842),6px 6px 16px rgba(88, 88, 88, 0.5) ;
+
+}
+.details-box{
+    background-color: #f7f7f7;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 1;
+    }
+.desc{
+    padding: 20px 5px 5px 5px;
+    margin:20px 20% 30px 20%;
+    font-size: 20px;
+}
+.details-container{
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    color:#616060;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+.btn-more{
+    background-color:#6b6b6b;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 40%;;
+    cursor: pointer;
+    margin:20px auto 50px auto;
+}
+.btn-more>a{
+color:white;
+text-decoration: none;
+}
+
+

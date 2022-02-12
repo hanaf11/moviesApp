@@ -11,11 +11,12 @@ function MovieCard(props) {
 
     return (
       <div className="moviecard">
-        <img src={props.pic}/>
+        <img className="poster" src={props.pic}/>
       <h1>{props.title}</h1>
+      <hr/>
       <p>{props.overview}</p>
-      <p>{props.rating}</p>
-      <button onClick={routing}>Details</button>
+      <p className="rating">Rating: {props.rating}</p>
+      <button className="btn-details"onClick={routing}>Details</button>
       </div>
     );
   }

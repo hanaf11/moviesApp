@@ -3,7 +3,10 @@ import { useParams } from "react-router-dom";
 import { useState,useEffect } from "react";
 import axios from "axios";
 import React from "react";
-
+import { FlagOutlined, Money } from "@material-ui/icons";
+import { TimerOutlined } from "@material-ui/icons";
+import { MoneySharp } from "@material-ui/icons";
+import { CalendarTodayOutlined } from "@material-ui/icons";
 
 function MoviePage() {
   let param=useParams();
@@ -41,16 +44,27 @@ function MoviePage() {
     
     if(movie!=null){
       imagePath="https://image.tmdb.org/t/p/w500"+movie.backdrop_path;
-      return(<div className="pokusaj">
-       
-        <img src={imagePath}/>
+      return(<div className="moviepage">
+       <div className="banner-container">
+        <img className="banner" src={imagePath}/>
        <h1>{movie.original_title}</h1>
-      <p>Budget: {movie.budget}</p>
-       <button><a href={movie.homepage}>Movie home page</a></button>
-       <p>{movie.overview}</p>
-       <p>Original language: {movie.original_language}</p>
-       <p>Release date: {movie.release_date}</p>
-       <p>Runtime {movie.runtime} min</p>
+       </div>
+
+       <div className="details-box">
+       <p className="desc">{movie.overview}</p>
+       <div className="details-container" >
+         
+        
+            <p className="detail"><FlagOutlined/> Original language:   {movie.original_language}</p>
+            <p className="detail"><MoneySharp/> Budget:  {movie.budget}$</p>
+            <p className="detail"><CalendarTodayOutlined/> Release date: {movie.release_date}</p>
+            <p className="detail"><TimerOutlined/> Runtime {movie.runtime}min</p>
+
+       
+        </div>
+        <br/><br/>
+       <button class="btn-more"><a href={movie.homepage}>More about the movie</a></button>
+     </div>
       
       </div>)
     }else{
