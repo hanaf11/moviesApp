@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useState,useEffect } from "react";
 import axios from "axios";
 import React from "react";
-import { FlagOutlined, Money } from "@material-ui/icons";
+import { FlagOutlined } from "@material-ui/icons";
 import { TimerOutlined } from "@material-ui/icons";
 import { MoneySharp } from "@material-ui/icons";
 import { CalendarTodayOutlined } from "@material-ui/icons";
@@ -11,34 +11,21 @@ import { CalendarTodayOutlined } from "@material-ui/icons";
 function MoviePage() {
   let param=useParams();
   let imagePath;
-
-    let m;
-    const [movie,setMovie]=useState(null);
+  const [movie,setMovie]=useState(null);
   
  
     useEffect(()=>{
       
         axios.get(`https://api.themoviedb.org/3/movie/${param.id}?api_key=179ffdb14b3d28c09ee69f31efea6adb&language=en-US`)
         .then(response=>{
-            console.log(response.data);
-           setMovie(response.data);
-           console.log(movie);
-        
            
-           m=response.data;
-          //console.log(movie);
-          console.log(m);
-          
+           setMovie(response.data); 
         })
         .catch(error=>{
             console.log("error fetching data" + error);
            
         })
 
-       /* return()=>{
-          axios.CancelToken.source().cancel();
-        }*/
-       
      
     },[])
     
@@ -63,7 +50,7 @@ function MoviePage() {
        
         </div>
         <br/><br/>
-       <button class="btn-more"><a href={movie.homepage}>More about the movie</a></button>
+       <button className="btn-more"><a href={movie.homepage}>More about the movie</a></button>
      </div>
       
       </div>)

@@ -1,5 +1,4 @@
 import "./MovieCard.css"
-
 import { useNavigate } from "react-router-dom";
 
 function MovieCard(props) {

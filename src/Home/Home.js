@@ -2,8 +2,8 @@ import "./Home.css";
 import MovieCard from "../MovieCard/MovieCard";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
 import SearchIcon from '@material-ui/icons/Search';
+
 
 function Home() {
     const [movies,setMovies]=useState([]);
@@ -16,7 +16,6 @@ function Home() {
         if(filter==null){
             axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=179ffdb14b3d28c09ee69f31efea6adb&language=en-US&page=${page}`)
             .then(response=>{
-                console.log(response.data.results);
                setMovies(response.data.results);
                
             })
@@ -27,7 +26,7 @@ function Home() {
         else{
             axios.get(`https://api.themoviedb.org/3/search/movie?api_key=179ffdb14b3d28c09ee69f31efea6adb&language=en-US&query=${filter}&page=${page}&include_adult=false`)
             .then(response=>{
-                console.log(response.data.results);
+
                setMovies(response.data.results);
                
             })
@@ -39,7 +38,7 @@ function Home() {
     },[page,filter])
   return (
     <div className="Home">
-        <div class="header">
+        <div className="header">
     <h1>My Movie App</h1>
     </div>
     <div className="content">
@@ -50,7 +49,6 @@ function Home() {
     <div className="movies-container">
         {Object.keys(movies).map(key=>{
             film=movies[key];
-            console.log(film.title);
             return(
             <MovieCard id={film.id} pic={url+film.backdrop_path} title={film.title} overview={film.overview} rating={film.vote_average}/>
             );
