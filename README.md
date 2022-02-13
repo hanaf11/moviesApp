@@ -9,10 +9,10 @@ This web app consists of 3 components:
 
 The idea on the Home page was to give user an overview of some popular movies every time the page renders (by default the page number 1 is shown).
 The user can type in a keyword in the search bar at the beginning of a page and the website will give them a response from /search/movie API method.
-At the bottom of a page the user can choose the page number and we are sending a request to API with the parameter "page".
-Any time when buttons "Search" and "Select page" are clicked, it will trigger the change of state for any of the parameters which will result
+At the bottom of a page the user can choose a page number and a request to API with the parameter "page" will be sent.
+Any time when buttons "Search" and "Select page" are clicked, it will trigger the change of state for the chosen parameter which will result
 in rendering the component again.
-For displaying movies I used functional components "MovieCard" that I made to which I passed the most important parameters.
+For displaying movies I used functional components "MovieCard" that I made to which I passed the most important movie properties
 When the user clicks on "Details" button, web app redirects them to the MoviePage where they can see more information about the movie.
 Routing was done with react-router-dom by passing the movie ID as a URL parameter. Then I used a useParams hook to extract the movie ID again
 so I can use it to get the wanted movie from API.
