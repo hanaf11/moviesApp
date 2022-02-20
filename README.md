@@ -1,6 +1,9 @@
 # moviesApp
 
--App where you can get information about popular movies
+#DEMO
+You can visit the site here ---> https://elastic-golick-f4fc39.netlify.app/
+
+- App where you can get information about popular movies
 - Modern design with a dash of neuromorphism
 
 This web app consists of 2 pages: 
