@@ -44,7 +44,7 @@ function Home() {
     <div className="content">
     <div className="search-container">
     <input type="text" id="filter"></input>
-    <button onClick={()=>setFilter(document.getElementById("filter").value)}>Search <SearchIcon/></button>
+    <button  onClick={()=>setFilter(document.getElementById("filter").value)}>Search <SearchIcon/></button>
     </div>
     <div className="movies-container">
         {Object.keys(movies).map(key=>{

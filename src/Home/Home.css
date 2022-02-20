@@ -5,10 +5,12 @@ body{
     background-color: #efeeee;
   
 }
-.Home h1{color:black;
-    font-size:50px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-bottom: 40px;
+.Home h1{
+    color:black;
+   margin-bottom: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 1px 2px 2px #C1C1C1;
+    font-size: 50px;
 }
 .content{
     display: flex;
@@ -21,6 +23,7 @@ body{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     margin-bottom: 30px;
+    box-shadow: 10px 5px 15px 1px #c4c4c4;
 }
 .header>h1{
     color:gray;
@@ -37,13 +40,22 @@ body{
     font-size: 22px;
     
 }
+#filter{
+    border:1px solid gray;
+    border-radius: 10px;
+}
+
 .search-container button{
     margin-left: 5px;
     border-radius: 10px;
     border:1px solid black;
     font-size: 16px;
-    
+    background-color: white;
 
+}
+.search-container button:hover{
+
+   background-color:  #eeecec;
 }
 .movies-container{
     margin:10px 40px 60px 40px;
@@ -59,4 +71,22 @@ body{
     font-size: 16px;
     border-radius: 10px;
     margin-left:5px;
+}
+#inputPage{
+    border:1px solid gray;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.page-container button{
+    margin-left: 5px;
+    border-radius: 10px;
+    border:1px solid black;
+    font-size: 16px;
+    background-color: white;
+    padding: 3px;
+
+}
+.page-container button:hover{
+
+   background-color:  #eeecec;
 }
